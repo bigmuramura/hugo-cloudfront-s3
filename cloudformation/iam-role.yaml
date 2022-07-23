@@ -55,8 +55,11 @@ Resources:
         Statement:
           - Effect: "Allow"
             Action:
+              - "s3:ListBucket"
               - "s3:PutObject"
-            Resource: !Sub arn:aws:s3:::${DeployTargetS3BucketName}/*
+            Resource:
+              - !Sub arn:aws:s3:::${DeployTargetS3BucketName}
+              - !Sub arn:aws:s3:::${DeployTargetS3BucketName}/*
 
 Outputs:
   Role:
