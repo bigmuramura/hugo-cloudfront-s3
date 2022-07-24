@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: "2010-09-09"
-Description: Cloudfront and S3
+Description: Cloudfront and S3 with CloudFront Functions
 
 Parameters:
   ProjectName:
